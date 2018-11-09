@@ -37,3 +37,15 @@ gitDF = jsonlite::fromJSON(jsonlite::toJSON(json1))
 # Subset data.frame
 gitDF[gitDF$full_name == "jtleek/datasharing", "created_at"]
 
+# Code above is sourced via Michael Galarnyk's blog: https://towardsdatascience.com/accessing-data-from-github-api-using-r-3633fb62cb08
+
+#----------------------------------------------------------------
+# Import my own data
+
+hollancoData = fromJSON("https://api.github.com/users/hollanco")
+hollancoData
+
+# View data in JSON form
+
+hollancoJSON = toJSON(hollancoData, pretty=T)
+hollancoJSON
